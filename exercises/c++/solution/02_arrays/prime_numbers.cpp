@@ -1,30 +1,27 @@
 #include<string>
 #include <iostream>
-
+#include<vector>
 
 bool is_prime(int n);
 
 
 int main(){
-	int prime[51]; //we create an array of int of dimension = 51 because we are sure that we don't have 51 prime numbers from 1 to 100
-	prime[0]=2;
+    std::vector<int> prime; //we create an array of int of dimension = 51 because we are sure that we don't have 51 prime numbers from 1 to 100
+    prime.emplace_back(2);
 	int contatore = 1;
 	for (int i=3;i<100;i++){
 		if(is_prime(i)){
-			prime[contatore]=i;
-			contatore=contatore + 1;
+            prime.emplace_back(i);
+            contatore = contatore +1;
 		   }
 	   }
     std::cout<<"tra 1 e 100 ci sono esattamente " << contatore << " numeri primi. "<< std::endl;
-		for (int i=0; i<50;i++){
-			std::cout<<prime[i]<< " " <<std::endl;
-		}
-    std::cout<<"Ecco qua la lista di numeri primi!"<<std::endl;
-	for(int i=0;i<contatore;i++){
-		std::cout<<"prime"<<"[ "<< i <<" ] "<< " = " <<prime[i] << std::endl;
-	}
-   
-	return 0;
+		
+    std::cout<<"Ecco qua la lista di numeri primi da 1 a 100!"<<std::endl;
+    for (const auto& x:prime){
+        std::cout << x <<std::endl;
+    }
+    return 0;
 }
 
 
