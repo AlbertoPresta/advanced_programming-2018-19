@@ -1,5 +1,4 @@
 CXX = c++
-LANG = ITALIANO
 CFLAGS = -fPIC -Wall -Wextra  
 EXE=main
 SRC = source/main.cc 
@@ -16,7 +15,7 @@ ${EXE}:libhello.so ${SRC}
 libhello.so:$(OBJH)
 	$(CXX) -shared -o $@ $^
 %.o:%.cc
-	$(CXX) ${CFLAGS} -D$(LANG) -o $@ -c $< -Iinclude
+	$(CXX) ${CFLAGS}  -o $@ -c $< -Iinclude
 
 
 clean:
