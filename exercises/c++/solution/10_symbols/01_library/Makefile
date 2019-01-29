@@ -1,9 +1,8 @@
 CXX = c++
 CFLAGS = -fPIC -Wall -Wextra  
 EXE=main
-SRC = source/main.cc 
+SRC = source/main.cc include/hello.cc
 OBJ = $(SRC:.c=.o)
-SRCH = include/hello.cc
 OBJH = include/hello.o 
 
 
