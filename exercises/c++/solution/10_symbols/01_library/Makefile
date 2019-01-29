@@ -7,7 +7,7 @@ OBJ = $(SRC:.c=.o)
 SRCH = include/hello.cc
 OBJH = include/hello.o 
 
-install: main
+
 all: libhello.so ${EXE}
 
 ${EXE}:libhello.so ${SRC}
