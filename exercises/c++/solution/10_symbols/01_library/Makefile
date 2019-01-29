@@ -1,6 +1,6 @@
 CXX = c++
 LANG = ITALIANO
-CFLAGS = -fPIC -Wall -Wextra  -g
+CFLAGS = -fPIC -Wall -Wextra  
 EXE=main
 SRC = source/main.cc 
 OBJ = $(SRC:.c=.o)
