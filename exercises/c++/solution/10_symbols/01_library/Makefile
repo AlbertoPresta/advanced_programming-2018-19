@@ -20,6 +20,6 @@ libhello.so:$(OBJH)
 
 
 clean:
-	-rm -f libhello.so ${OBJS} $(SRCS:.c=.d)
+	-rm -f libhello.so  ${OBJS} 
 
 
